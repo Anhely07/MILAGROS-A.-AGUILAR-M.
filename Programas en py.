@@ -1,0 +1,64 @@
+# Programa para calcular el Índice de Masa Corporal (IMC)
+
+peso = float(input("Introduce tu peso en kg: "))
+estatura = float(input("Introduce tu estatura en metros: "))
+
+imc = peso / (estatura ** 2)
+print(f"Tu índice de masa corporal es {imc:.2f}")
+
+
+# Programa para calcular el precio de barras de pan con descuento
+
+precio_barra = 2.5
+descuento = 0.60
+
+barras_no_frescas = int(input("Introduce el número de barras no frescas vendidas: "))
+
+precio_total = barras_no_frescas * precio_barra * (1 - descuento)
+
+print(f"Precio habitual de una barra: {precio_barra} S/.")
+print(f"Descuento aplicado: {descuento * 100}%")
+print(f"Coste final: {precio_total:.2f} S/.")
+
+
+# Programa para realizar una división entera y mostrar el cociente y el resto
+
+n = int(input("Introduce el primer número (n): "))
+m = int(input("Introduce el segundo número (m): "))
+
+cociente = n // m
+resto = n % m
+
+print(f"{n} entre {m} da un cociente de: {cociente} y un resto de: {resto}")
+
+# Programa para asignar el grupo A o B según el nombre y sexo
+
+nombre = input("Introduce tu nombre: ").lower()
+sexo = input("Introduce tu sexo (M para masculino, F para femenino): ").lower()
+
+if (sexo == 'f' and nombre < 'f') or (sexo == 'm' and nombre > 'o'):
+    print("Perteneces al grupo A.")
+else:
+    print("Perteneces al grupo B.")
+
+
+# Programa para calcular el precio de entrada a una sala de juegos según la edad
+
+edad = int(input("Introduce tu edad: "))
+
+if edad < 5:
+    precio = 0
+elif edad <= 18:
+    precio = 5
+else:
+    precio = 10
+
+print(f"El precio de la entrada es: S/. {precio}")
+
+
+# Programa que pide un número entero positivo y muestra una cuenta atrás
+
+numero = int(input("Introduce un número entero positivo: "))
+
+for i in range(numero, -1, -1):
+    print(i, end=", ")
